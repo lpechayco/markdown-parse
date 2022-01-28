@@ -1,12 +1,12 @@
 import static org.junit.Assert.*;
+import org.junit.*;
 
 import java.io.IOException;
-import java.util.List;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
+import java.util.List;
 
-import org.junit.*;
+
 
 public class MarkdownParseTest {
     @Test
@@ -22,8 +22,8 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void testGetLinks1() throws IOException {
-        assertEquals("[]", 
-            MarkdownParse.getLinks(Files.readString(Path.of("test-file5.md"))));
+    public void testGetLinks1() throws IOException() {
+        assertEquals(List.of("https://something.com", "some-page.html"), 
+            MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
     }
 }
