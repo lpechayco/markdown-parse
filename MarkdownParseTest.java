@@ -15,6 +15,7 @@ public class MarkdownParseTest {
     }
 
     List strList = List.of("hi", "hey", "hello");
+    List intList = List.of(1,2,3);
 
     @Test
     public void checkContents() {
